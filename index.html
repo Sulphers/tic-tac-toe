@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #DDD0C8;
+            text-align: center;
+            margin-top: 100px;
+            font-family: 'Arial', sans-serif; /* Utilisation d'une police d'écriture différente pour le titre */
+        } 
+
+        #game {
+            display: inline-block;
+            padding: 10px;
+            background-color: steelblue;
+        }
+
+        #game div {
+            overflow: hidden;
+        }
+
+        #game button {
+            width: 100px;
+            height: 100px;
+            margin: 3px;
+            font-size: 20px;
+            float: left;
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        .cell-clicked {
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                background-color: inherit;
+            }
+            50% {
+                background-color: gold;
+            }
+        }
+
+        .cell-winning {
+            animation: blink 1s infinite;
+        }
+
+        /* Couleur bleue pour 'X' */
+        #game button[data-value="X"] {
+            color: rgb(1, 1, 126);
+        }
+
+        /* Couleur rouge pour 'O' */
+        #game button[data-value="O"] {
+            color: rgb(135, 2, 2);
+        }
+    </style>
+    <script src="Morpion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+    <title>Morpion</title>
+</head>
+<body>
+
+    <h1 style="font-family: 'Helvetica', sans-serif;">Le jeu du Morpion ! </h1>
+
+    <div id="game">
+        <div>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+        <div>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+        <div>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+
+</body>
+</html>
